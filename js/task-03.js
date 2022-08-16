@@ -17,15 +17,21 @@ const galleryList = document.querySelector(".gallery");
 galleryList.style.cssText = `
 display: flex;
 list-style: none;
+flex-direction: column;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
+alt: center;
 padding:0;
 margin:0;
+border-radius: 10;
 `;
 
+let newElement = [];
 for (const element of images) {
-  galleryList.insertAdjacentHTML(
-    "beforeend",
-    `<li class="gallery-item"><img style='display:block; border-radius:10px' class='item-image' src="${element.url}" alt="${element.alt}" width="400" '</li>`
+  newElement.push(
+    `<li class="gallery-item">
+    <img style="border-radius: 10px" class='item-image' src="${element.url}" alt="${element.alt}" width='300'</li>`
   );
 }
+
+galleryList.insertAdjacentHTML("afterBegin", newElement.join(""));
