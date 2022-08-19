@@ -11,5 +11,7 @@ function changeFontSize() {
 
 const currentFontSize = document.createElement("div");
 currentFontSize.style.color = "teal";
-spanText.append(currentFontSize);
+spanText.after(currentFontSize);
 currentFontSize.textContent = `${inputRange.value}px`;
+
+spanText.style.fontSize = `${inputRange.value}px`;
