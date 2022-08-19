@@ -11,6 +11,10 @@ function handleSubmit(event) {
     if(password.value === '') {
         alert('Не заповнене поле "Password"')
     }
-    console.log(`userEmail: ${email.value}, userPassword: ${password.value}`)
+    const result = {
+        userEmail: email.value, 
+        userPassword: password.value
+    }
+   console.log(result)
     form.reset()
 }

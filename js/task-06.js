@@ -12,5 +12,7 @@ function onInputElement(event) {
     !event.currentTarget.value.includes(" ")
   ) {
     input.classList.add("valid");
-  } else input.classList.add("invalid");
+  } else {
+    input.classList.add("invalid");
+  };
 }
